@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html and Css with javascript</title>
+    <style id="dynamic-style"></style>
+</head>
+<body>
+    <main id="main-container"></main>
+
+    <script>
+        const mainContainer =document.getElementById("main-container");
+
+        const aboutSection =document.createElement ("about");
+        aboutSection.innerHTML= `
+        <section class="about-section">
+        <div class="about-wrap">
+            <div class="single-box-about">
+               <div class="about-content">
+                <h1 class="about-name">Natural Beauty</h1>
+                <p class="about-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laudantium in a odit rem similique fugiat sint inventore officia error possimus, enim qui architecto repudiandae nesciunt, debitis quidem amet neque?</p>
+               </div>
+            </div>
+            <div class="single-box-about">
+                <div class="img-box-about">
+                    <img class="nature-about" src="/image/crystal-ball.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        </section>
+        `
+        mainContainer.appendChild(aboutSection);
+
+        const aboutFeatureSection =document.createElement ("about-feature");
+
+        aboutFeatureSection.innerHTML=`
+        <section class="about-feature">
+        <div class="feature-wrap">
+            <div class="heading">
+                <h1 class="name">Tailor-made features</h1>
+                <p class="details-features">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, et qui magnam hic consectetur sequi corrupti laboriosam iste expedita quidem.</p>
+            </div>
+            <div class="item-wrap">
+                <div class="single-box">
+                    <img class="icon" src="/image/50-501709_clip-art-salon.png" alt="">
+                    <h2 class="">Robust Workflow</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, iste.</p>
+                </div>
+                <div class="single-box">
+                    <img class="icon" src="/image/50-501709_clip-art-salon.png" alt="">
+                    <h2>Flexibility</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, iste.</p>
+                </div>
+                <div class="single-box">
+                    <img class="icon" src="/image/50-501709_clip-art-salon.png" alt="">
+                    <h2>User Friendly</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, iste.</p>
+                </div>
+                <div class="single-box">
+                    <img class="icon" src="/image/50-501709_clip-art-salon.png" alt="">
+                    <h2>Multi Layouts</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, iste.</p>
+                </div>
+                <div class="single-box">
+                    <img class="icon" src="/image/50-501709_clip-art-salon.png" alt="">
+                    <h2>Better Components</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, iste.</p>
+                </div>
+                <div class="single-box">
+                    <img class="icon" src="/image/50-501709_clip-art-salon.png" alt="">
+                    <h2>Well Organised</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, iste.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+     `
+     mainContainer.appendChild(aboutFeatureSection);
+
+    const dynamicStyle= document.getElementById("dynamic-style");
+    dynamicStyle.textContent=`
+    .about-wrap {
+        display:flex;
+        align-items:center ;
+        padding:50px  100px;
+        justify-content:spaceBetween;
+
+    }
+    .single-box-about {
+        width:50% ;
+    }
+    .about-name {
+        font-size:50px;
+        color:red ;
+    }
+    .about-paragraph {
+        line-height:1.5;
+        font-size:18px;
+    }
+    .nature-about {
+        height:500px;
+        width:100%;
+        border-radius:30px;
+    }
+    .about-feature {
+        padding:50px 0px;
+        display:flex;
+        justify-content:center;
+    }
+    .feature-wrap {
+        width:1000px;
+    }
+    .name {
+        font-size:50px;
+        text-align:center;
+        color:blue;
+    }
+    .details-features {
+        text-align:center;
+        padding:0px 100px;
+        line-height:1.5;
+        font-size:18px;
+    }
+    .item-wrap {
+        display:flex;
+        flex-wrap:wrap;
+        margin-top:50px;
+    }
+    .single-box {
+        width:30%;
+        margin:0 auto;
+        text-align:center;
+    }
+    .icon {
+        width:50px;
+    }
+    `
+    </script>
+</body>
+</html>
